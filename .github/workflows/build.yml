@@ -52,3 +52,12 @@ jobs:
           tags: alexeyvatolin/bertopic-as-service:latest
           cache-from: type=registry,ref=ghcr.io/alexeyvatolin/bertopic-as-service:buildcache
           cache-to: type=registry,ref=ghcr.io/alexeyvatolin/bertopic-as-service:buildcache,mode=max
+      -
+        name: images
+        run: docker images ls
+      -
+        name: docker compose
+        run: make up
+      -
+        name: images 2
+        run: docker images ls

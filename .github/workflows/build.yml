@@ -50,5 +50,5 @@ jobs:
           context: .
           push: true
           tags: alexeyvatolin/bertopic-as-service:latest
-          cache-from: type=registry,ref=alexeyvatolin/bertopic-as-service:buildcache
-          cache-to: type=registry,ref=alexeyvatolin/bertopic-as-service:buildcache,mode=max
+          cache-from: type=registry,ref=ghcr.io/alexeyvatolin/bertopic-as-service:buildcache
+          cache-to: type=registry,ref=ghcr.io/alexeyvatolin/bertopic-as-service:buildcache,mode=max

@@ -24,7 +24,7 @@ env:
   POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
   POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
   REGISTRY: ghcr.io
-  IMAGE: shkaolin/bertopic-as-service
+  IMAGE: alexeyvatolin/bertopic-as-service
 
 jobs:
   build:
@@ -49,6 +49,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: AlexeyVatolin/bertopic-as-service:latest
-          cache-from: type=registry,ref=AlexeyVatolin/bertopic-as-service:buildcache
-          cache-to: type=registry,ref=AlexeyVatolin/bertopic-as-service:buildcache,mode=max
+          tags: ${{ IMAGE }}:latest
+          cache-from: type=registry,ref=${{ IMAGE }}:buildcache
+          cache-to: type=registry,ref=${{ IMAGE }}:buildcache,mode=max

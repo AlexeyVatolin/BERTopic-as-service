@@ -17,7 +17,6 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.7"
-bertopic = "0.9.3"
 fastapi = "*"
 gunicorn = "*"
 uvicorn = "*"

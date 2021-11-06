@@ -49,6 +49,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ IMAGE }}:latest
-          cache-from: type=registry,ref=${{ IMAGE }}:buildcache
-          cache-to: type=registry,ref=${{ IMAGE }}:buildcache,mode=max
+          tags: alexeyvatolin/bertopic-as-service:latest
+          cache-from: type=registry,ref=alexeyvatolin/bertopic-as-service:buildcache
+          cache-to: type=registry,ref=alexeyvatolin/bertopic-as-service:buildcache,mode=max
